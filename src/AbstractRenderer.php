@@ -15,58 +15,58 @@ namespace Joomla\Renderer;
  */
 abstract class AbstractRenderer implements RendererInterface
 {
-	/**
-	 * Data for output by the renderer
-	 *
-	 * @var    array
-	 * @since  2.0.0
-	 */
-	protected $data = [];
+    /**
+     * Data for output by the renderer
+     *
+     * @var    array
+     * @since  2.0.0
+     */
+    protected $data = [];
 
-	/**
-	 * Sets a piece of data
-	 *
-	 * @param   string  $key    Name of variable
-	 * @param   string  $value  Value of variable
-	 *
-	 * @return  $this
-	 *
-	 * @since   2.0.0
-	 */
-	public function set(string $key, $value)
-	{
-		$this->data[$key] = $value;
+    /**
+     * Sets a piece of data
+     *
+     * @param   string  $key    Name of variable
+     * @param   string  $value  Value of variable
+     *
+     * @return  $this
+     *
+     * @since   2.0.0
+     */
+    public function set(string $key, $value)
+    {
+        $this->data[$key] = $value;
 
-		return $this;
-	}
+        return $this;
+    }
 
-	/**
-	 * Loads data from array into the renderer
-	 *
-	 * @param   array  $data  Array of variables
-	 *
-	 * @return  $this
-	 *
-	 * @since   2.0.0
-	 */
-	public function setData(array $data)
-	{
-		$this->data = $data;
+    /**
+     * Loads data from array into the renderer
+     *
+     * @param   array  $data  Array of variables
+     *
+     * @return  $this
+     *
+     * @since   2.0.0
+     */
+    public function setData(array $data)
+    {
+        $this->data = $data;
 
-		return $this;
-	}
+        return $this;
+    }
 
-	/**
-	 * Unloads data from renderer
-	 *
-	 * @return  $this
-	 *
-	 * @since   2.0.0
-	 */
-	public function unsetData()
-	{
-		$this->data = [];
+    /**
+     * Unloads data from renderer
+     *
+     * @return  $this
+     *
+     * @since   2.0.0
+     */
+    public function unsetData()
+    {
+        $this->data = [];
 
-		return $this;
-	}
+        return $this;
+    }
 }

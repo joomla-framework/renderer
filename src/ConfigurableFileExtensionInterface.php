@@ -15,14 +15,14 @@ namespace Joomla\Renderer;
  */
 interface ConfigurableFileExtensionInterface
 {
-	/**
-	 * Sets file extension for template loader
-	 *
-	 * @param   string  $extension  Template files extension
-	 *
-	 * @return  $this
-	 *
-	 * @since   2.0.0
-	 */
-	public function setFileExtension(string $extension);
+    /**
+     * Sets file extension for template loader
+     *
+     * @param   string  $extension  Template files extension
+     *
+     * @return  $this
+     *
+     * @since   2.0.0
+     */
+    public function setFileExtension(string $extension);
 }

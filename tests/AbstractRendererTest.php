@@ -16,49 +16,49 @@ use PHPUnit\Framework\TestCase;
  */
 class AbstractRendererTest extends TestCase
 {
-	/**
-	 * @testdox  A data key is set to the renderer
-	 *
-	 * @covers   Joomla\Renderer\AbstractRenderer
-	 */
-	public function testADataKeyIsSetToTheRenderer()
-	{
-		/** @var MockObject|AbstractRenderer $renderer */
-		$renderer = $this->getMockForAbstractClass(AbstractRenderer::class);
+    /**
+     * @testdox  A data key is set to the renderer
+     *
+     * @covers   Joomla\Renderer\AbstractRenderer
+     */
+    public function testADataKeyIsSetToTheRenderer()
+    {
+        /** @var MockObject|AbstractRenderer $renderer */
+        $renderer = $this->getMockForAbstractClass(AbstractRenderer::class);
 
-		$renderer->set('foo', 'bar');
+        $renderer->set('foo', 'bar');
 
-		$this->assertSame(['foo' => 'bar'], TestHelper::getValue($renderer, 'data'));
-	}
+        $this->assertSame(['foo' => 'bar'], TestHelper::getValue($renderer, 'data'));
+    }
 
-	/**
-	 * @testdox  A data array is set to the renderer
-	 *
-	 * @covers   Joomla\Renderer\AbstractRenderer
-	 */
-	public function testADataArrayIsSetToTheRenderer()
-	{
-		/** @var MockObject|AbstractRenderer $renderer */
-		$renderer = $this->getMockForAbstractClass(AbstractRenderer::class);
+    /**
+     * @testdox  A data array is set to the renderer
+     *
+     * @covers   Joomla\Renderer\AbstractRenderer
+     */
+    public function testADataArrayIsSetToTheRenderer()
+    {
+        /** @var MockObject|AbstractRenderer $renderer */
+        $renderer = $this->getMockForAbstractClass(AbstractRenderer::class);
 
-		$renderer->setData(['foo' => 'bar']);
+        $renderer->setData(['foo' => 'bar']);
 
-		$this->assertSame(['foo' => 'bar'], TestHelper::getValue($renderer, 'data'));
-	}
+        $this->assertSame(['foo' => 'bar'], TestHelper::getValue($renderer, 'data'));
+    }
 
-	/**
-	 * @testdox  The renderer's data array is reset
-	 *
-	 * @covers   Joomla\Renderer\AbstractRenderer
-	 */
-	public function testTheRenderersDataArrayIsReset()
-	{
-		/** @var MockObject|AbstractRenderer $renderer */
-		$renderer = $this->getMockForAbstractClass(AbstractRenderer::class);
+    /**
+     * @testdox  The renderer's data array is reset
+     *
+     * @covers   Joomla\Renderer\AbstractRenderer
+     */
+    public function testTheRenderersDataArrayIsReset()
+    {
+        /** @var MockObject|AbstractRenderer $renderer */
+        $renderer = $this->getMockForAbstractClass(AbstractRenderer::class);
 
-		$renderer->setData(['foo' => 'bar']);
-		$renderer->unsetData();
+        $renderer->setData(['foo' => 'bar']);
+        $renderer->unsetData();
 
-		$this->assertEmpty(TestHelper::getValue($renderer, 'data'));
-	}
+        $this->assertEmpty(TestHelper::getValue($renderer, 'data'));
+    }
 }

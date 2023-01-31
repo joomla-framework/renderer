@@ -15,75 +15,72 @@ namespace Joomla\Renderer;
  */
 class MustacheRenderer extends AbstractRenderer
 {
-	/**
-	 * Rendering engine
-	 *
-	 * @var    \Mustache_Engine
-	 * @since  2.0.0
-	 */
-	private $renderer;
+    /**
+     * Rendering engine
+     *
+     * @var    \Mustache_Engine
+     * @since  2.0.0
+     */
+    private $renderer;
 
-	/**
-	 * Constructor
-	 *
-	 * @param   \Mustache_Engine  $renderer  Rendering engine
-	 *
-	 * @since   2.0.0
-	 */
-	public function __construct(\Mustache_Engine $renderer = null)
-	{
-		$this->renderer = $renderer ?: new \Mustache_Engine;
-	}
+    /**
+     * Constructor
+     *
+     * @param   \Mustache_Engine  $renderer  Rendering engine
+     *
+     * @since   2.0.0
+     */
+    public function __construct(\Mustache_Engine $renderer = null)
+    {
+        $this->renderer = $renderer ?: new \Mustache_Engine();
+    }
 
-	/**
-	 * Get the rendering engine
-	 *
-	 * @return  \Mustache_Engine
-	 *
-	 * @since   2.0.0
-	 */
-	public function getRenderer()
-	{
-		return $this->renderer;
-	}
+    /**
+     * Get the rendering engine
+     *
+     * @return  \Mustache_Engine
+     *
+     * @since   2.0.0
+     */
+    public function getRenderer()
+    {
+        return $this->renderer;
+    }
 
-	/**
-	 * Checks if folder, folder alias, template or template path exists
-	 *
-	 * @param   string  $path  Full path or part of a path
-	 *
-	 * @return  boolean  True if the path exists
-	 *
-	 * @since   2.0.0
-	 */
-	public function pathExists(string $path): bool
-	{
-		try
-		{
-			$this->getRenderer()->getLoader()->load($path);
+    /**
+     * Checks if folder, folder alias, template or template path exists
+     *
+     * @param   string  $path  Full path or part of a path
+     *
+     * @return  boolean  True if the path exists
+     *
+     * @since   2.0.0
+     */
+    public function pathExists(string $path): bool
+    {
+        try {
+            $this->getRenderer()->getLoader()->load($path);
 
-			return true;
-		}
-		catch (\Mustache_Exception_UnknownTemplateException $e)
-		{
-			return false;
-		}
-	}
+            return true;
+        } catch (\Mustache_Exception_UnknownTemplateException $e) {
+            return false;
+        }
+    }
 
-	/**
-	 * Render and return compiled data.
-	 *
-	 * @param   string  $template  The template file name
-	 * @param   array   $data      The data to pass to the template
-	 *
-	 * @return  string  Compiled data
-	 *
-	 * @since   2.0.0
-	 */
-	public function render(string $template, array $data = []): string
-	{
-		$data = array_merge($this->data, $data);
+    /**
+     * Render and return compiled data.
+     *
+     * @param   string  $template  The template file name
+     * @param   array   $data      The data to pass to the template
+     *
+     * @return  string  Compiled data
+     *
+     * @since   2.0.0
+     */
+    public function render(string $template, array $data = []): string
+    {
+        $data = array_merge($this->data, $data);
 
-		return $this->getRenderer()->render($template, $data);
-	}
+        return $this->getRenderer()->render($template, $data);
+    }
 }

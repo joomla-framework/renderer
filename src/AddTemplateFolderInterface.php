@@ -15,15 +15,15 @@ namespace Joomla\Renderer;
  */
 interface AddTemplateFolderInterface
 {
-	/**
-	 * Add a folder with alias to the renderer
-	 *
-	 * @param   string  $directory  The folder path
-	 * @param   string  $alias      The folder alias
-	 *
-	 * @return  $this
-	 *
-	 * @since   2.0.0
-	 */
-	public function addFolder(string $directory, string $alias = '');
+    /**
+     * Add a folder with alias to the renderer
+     *
+     * @param   string  $directory  The folder path
+     * @param   string  $alias      The folder alias
+     *
+     * @return  $this
+     *
+     * @since   2.0.0
+     */
+    public function addFolder(string $directory, string $alias = '');
 }
