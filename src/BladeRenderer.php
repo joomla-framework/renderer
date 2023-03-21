@@ -36,7 +36,7 @@ class BladeRenderer extends AbstractRenderer implements AddTemplateFolderInterfa
     /**
      * Constructor.
      *
-     * @param   Factory  $renderer  Rendering engine
+     * @param   ?Factory  $renderer  Rendering engine
      *
      * @since   2.0.0
      */

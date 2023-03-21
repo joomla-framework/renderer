@@ -27,7 +27,7 @@ class MustacheRenderer extends AbstractRenderer
     /**
      * Constructor
      *
-     * @param   \Mustache_Engine  $renderer  Rendering engine
+     * @param   ?\Mustache_Engine  $renderer  Rendering engine
      *
      * @since   2.0.0
      */
