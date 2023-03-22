@@ -29,7 +29,7 @@ class PlatesRenderer extends AbstractRenderer implements AddTemplateFolderInterf
     /**
      * Constructor.
      *
-     * @param   Engine  $renderer  Rendering engine
+     * @param   ?Engine  $renderer  Rendering engine
      *
      * @since   2.0.0
      */

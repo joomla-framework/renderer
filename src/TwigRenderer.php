@@ -32,7 +32,7 @@ class TwigRenderer extends AbstractRenderer implements AddTemplateFolderInterfac
     /**
      * Constructor.
      *
-     * @param   Environment  $renderer  Rendering engine
+     * @param   ?Environment  $renderer  Rendering engine
      *
      * @since   2.0.0
      */
