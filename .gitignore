@@ -1,17 +1,16 @@
-# IDE/System based files and folders #
+# IDE Related Files #
 .buildpath
 .project
 .settings
 .DS_Store
 .idea
 
-# Composer installation #
-vendor/*
+# Composer and test related files #
+vendor/
 composer.phar
 composer.lock
-
-# Local PHPUnit configuration #
-.phpunit.result.cache
 phpunit.xml
-/tests/stubs/blade/cache
-/vendor/
+.phpunit.cache/
+.idea/
+/.phpunit.result.cache
+/.phpunit.cache/

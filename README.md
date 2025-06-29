@@ -1,4 +1,4 @@
-# The Renderer Package [![Build Status](https://ci.joomla.org/api/badges/joomla-framework/renderer/status.svg?ref=refs/heads/3.x-dev)](https://ci.joomla.org/joomla-framework/renderer)
+# The Renderer Package [![Build Status](https://github.com/joomla-framework/renderer/actions/workflows/ci.yml/badge.svg?branch=3.x-dev)](https://github.com/joomla-framework/renderer)
 
 [![Latest Stable Version](https://poser.pugx.org/joomla/renderer/v/stable)](https://packagist.org/packages/joomla/renderer)
 [![Total Downloads](https://poser.pugx.org/joomla/renderer/downloads)](https://packagist.org/packages/joomla/renderer)
