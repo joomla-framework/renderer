@@ -92,17 +92,7 @@ class TwigRenderer extends AbstractRenderer implements AddTemplateFolderInterfac
     {
         $loader = $this->getRenderer()->getLoader();
 
-        /*
-         * For Twig 1.x compatibility, check if the loader implements ExistsLoaderInterface
-         * As of Twig 2.0, the `exists()` method is part of LoaderInterface
-         * This conditional may be removed when dropping Twig 1.x support
-         */
-        if ($loader instanceof ExistsLoaderInterface || method_exists(LoaderInterface::class, 'exists')) {
-            return $loader->exists($path);
-        }
-
-        // For all other cases we'll assume the path exists
-        return true;
+        return $loader->exists($path);
     }
 
     /**
