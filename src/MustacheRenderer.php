@@ -9,6 +9,9 @@
 
 namespace Joomla\Renderer;
 
+use Mustache\Engine;
+use Mustache\Exception\UnknownTemplateException;
+
 /**
  * Mustache class for rendering output.
  *
@@ -19,7 +22,7 @@ class MustacheRenderer extends AbstractRenderer
     /**
      * Rendering engine
      *
-     * @var    \Mustache_Engine
+     * @var    Engine
      * @since  2.0.0
      */
     private $renderer;
@@ -27,19 +30,19 @@ class MustacheRenderer extends AbstractRenderer
     /**
      * Constructor
      *
-     * @param   ?\Mustache_Engine  $renderer  Rendering engine
+     * @param   ?Engine  $renderer  Rendering engine
      *
      * @since   2.0.0
      */
-    public function __construct(?\Mustache_Engine $renderer = null)
+    public function __construct(?Engine $renderer = null)
     {
-        $this->renderer = $renderer ?: new \Mustache_Engine();
+        $this->renderer = $renderer ?: new Engine();
     }
 
     /**
      * Get the rendering engine
      *
-     * @return  \Mustache_Engine
+     * @return  Engine
      *
      * @since   2.0.0
      */
@@ -63,7 +66,7 @@ class MustacheRenderer extends AbstractRenderer
             $this->getRenderer()->getLoader()->load($path);
 
             return true;
-        } catch (\Mustache_Exception_UnknownTemplateException $e) {
+        } catch (UnknownTemplateException $e) {
             return false;
         }
     }
