@@ -1,0 +1,58 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Class Illuminate\\View\\Compilers\\BladeCompiler constructor invoked with 1 parameter, 2\-6 required\.$#'
+			identifier: arguments.count
+			count: 1
+			path: src/BladeRenderer.php
+
+		-
+			message: '''
+				#^Call to method exists\(\) of deprecated class Symfony\\Component\\Templating\\PhpEngine\:
+				since Symfony 6\.4, use Twig instead$#
+			'''
+			identifier: method.deprecatedClass
+			count: 1
+			path: src/PhpEngineRenderer.php
+
+		-
+			message: '''
+				#^Call to method render\(\) of deprecated class Symfony\\Component\\Templating\\PhpEngine\:
+				since Symfony 6\.4, use Twig instead$#
+			'''
+			identifier: method.deprecatedClass
+			count: 1
+			path: src/PhpEngineRenderer.php
+
+		-
+			message: '#^PHPDoc tag @param for parameter \$template with type string\|Symfony\\Component\\Templating\\TemplateReferenceInterface is not subtype of native type string\.$#'
+			identifier: parameter.phpDocType
+			count: 1
+			path: src/PhpEngineRenderer.php
+
+		-
+			message: '''
+				#^Parameter \$renderer of method Joomla\\Renderer\\PhpEngineRenderer\:\:__construct\(\) has typehint with deprecated class Symfony\\Component\\Templating\\PhpEngine\:
+				since Symfony 6\.4, use Twig instead$#
+			'''
+			identifier: parameter.deprecatedClass
+			count: 2
+			path: src/PhpEngineRenderer.php
+
+		-
+			message: '''
+				#^Parameter \$template of method Joomla\\Renderer\\PhpEngineRenderer\:\:render\(\) has typehint with deprecated interface Symfony\\Component\\Templating\\TemplateReferenceInterface\:
+				since Symfony 6\.4, use Twig instead$#
+			'''
+			identifier: parameter.deprecatedInterface
+			count: 1
+			path: src/PhpEngineRenderer.php
+
+		-
+			message: '''
+				#^Return type of method Joomla\\Renderer\\PhpEngineRenderer\:\:getRenderer\(\) has typehint with deprecated class Symfony\\Component\\Templating\\PhpEngine\:
+				since Symfony 6\.4, use Twig instead$#
+			'''
+			identifier: return.deprecatedClass
+			count: 1
+			path: src/PhpEngineRenderer.php
