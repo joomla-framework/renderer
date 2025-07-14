@@ -73,7 +73,7 @@ class BladeRendererTest extends TestCase
      */
     public function testAnAdditionalPathIsAddedToTheRenderer()
     {
-        $path     = __DIR__ . '/stubs/templating';
+        $path     = __DIR__ . '/stubs/blade';
         $renderer = new BladeRenderer($this->makeFactory());
 
         $this->assertSame($renderer, $renderer->addFolder($path, 'test'), 'The addFolder method has a fluent interface');

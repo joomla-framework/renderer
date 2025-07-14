@@ -8,6 +8,7 @@
 namespace Joomla\Renderer\Tests;
 
 use Joomla\Renderer\MustacheRenderer;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -18,12 +19,14 @@ class MustacheRendererTest extends TestCase
     /**
      * Data provider for path existence checks
      *
-     * @return  \Generator
+     * @return  array
      */
-    public function dataPathExists(): \Generator
+    public static function dataPathExists(): array
     {
-        yield 'Existing file' => ['index.mustache', true];
-        yield 'Non-existing file' => ['error.mustache', false];
+        return [
+            'Existing file' => ['index.mustache', true],
+            'Non-existing file' => ['error.mustache', false],
+        ];
     }
 
     /**
@@ -55,13 +58,13 @@ class MustacheRendererTest extends TestCase
      * @param   boolean  $result  Expected result
      *
      * @covers   Joomla\Renderer\MustacheRenderer
-     * @dataProvider  dataPathExists
      */
+    #[DataProvider('dataPathExists')]
     public function testCheckThatAPathExists($file, $result)
     {
-        $engine = new \Mustache_Engine(
+        $engine = new \Mustache\Engine(
             [
-                'loader' => new \Mustache_Loader_FilesystemLoader(__DIR__ . '/stubs/mustache'),
+                'loader' => new \Mustache\Loader\FilesystemLoader(__DIR__ . '/stubs/mustache'),
             ]
         );
 
