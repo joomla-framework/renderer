@@ -17,7 +17,7 @@
         "mustache/mustache": "^3.0",
         "phpunit/phpunit": "^12.2.7",
         "symfony/templating": "^6.4",
-        "twig/twig": "^3.5.0",
+        "twig/twig": "^3.19.0",
         "squizlabs/php_codesniffer": "^3.7.2",
         "phpstan/phpstan": "^2.1.17",
         "phpstan/phpstan-deprecation-rules": "^2.0.3"
@@ -27,7 +27,7 @@
         "league/plates": "Install ^3.0 if you are using the Plates template engine.",
         "mustache/mustache": "Install ^3.0 if you are using the Mustache template engine.",
         "symfony/templating": "Install ^6.4 if you are using Symfony's PHP template component.",
-        "twig/twig": "Install ^3.5.0 if you are using the Twig template engine."
+        "twig/twig": "Install ^3.19.0 if you are using the Twig template engine."
     },
     "autoload": {
         "psr-4": {
