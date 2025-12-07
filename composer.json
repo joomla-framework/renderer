@@ -9,7 +9,7 @@
         "php": "^8.3.0"
     },
     "require-dev": {
-        "joomla/test": "dev-4.x-dev",
+        "joomla/test": "^4.0",
         "illuminate/events": "^12.20.0",
         "illuminate/filesystem": "^12.20.0",
         "illuminate/view": "^12.20.0",
