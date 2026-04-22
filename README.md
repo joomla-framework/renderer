@@ -1,9 +1,17 @@
+# EOL
+
+This packages is no longer maintained and archived. No replacement by the Joomla Project is planned.
+
 # The Renderer Package [![Build Status](https://github.com/joomla-framework/renderer/actions/workflows/ci.yml/badge.svg?branch=3.x-dev)](https://github.com/joomla-framework/renderer)
 
 [![Latest Stable Version](https://poser.pugx.org/joomla/renderer/v/stable)](https://packagist.org/packages/joomla/renderer)
 [![Total Downloads](https://poser.pugx.org/joomla/renderer/downloads)](https://packagist.org/packages/joomla/renderer)
 [![Latest Unstable Version](https://poser.pugx.org/joomla/renderer/v/unstable)](https://packagist.org/packages/joomla/renderer)
 [![License](https://poser.pugx.org/joomla/renderer/license)](https://packagist.org/packages/joomla/renderer)
+
+## Deprecated
+
+The joomla/renderer package has been deprecated. No further updates are planned.
 
 ## Interfaces
 
